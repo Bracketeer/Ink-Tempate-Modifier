@@ -2,13 +2,21 @@ $(document).ready(function () {
       //////////////////
     //Logo Image script//    
      //////////////////
+    
     $('#addLogo').click(function () {
-        $('#Logo').empty ();
+        $('#rowHeader').removeClass('displayNone');
     	var addLogo = $("input[name=Logo]").val();
-        $('#Logo').append ('<img src="' + addLogo + '" width="auto" height="75px" />');
+        if(addLogo === 'Logo URL'){
+        $('#Logo').empty ();    
+        $('#Logo').append ('<img src="http://placehold.it/150x75" />')}
+            else{
+        $('#Logo').empty();    
+         $('#Logo').append ('<img src="' + addLogo + '" height="75px" />')}
     });
+        
     $('#removeLogo').click (function() {
-        $('#Logo').empty ();
+        $('#rowHeader').addClass('displayNone');
+        
     });   
       ///////////////////
     //subheadline script//    
@@ -147,12 +155,20 @@ $(document).ready(function () {
      ///////////////////////
     $('#addClientPhoto').click(function () {
         $('#ClientPhoto').empty ();
-    	var addClientPhoto = $("input[name=ClientPhoto]").val();
+    	var addClientPhoto = $("input[name=Color]").val();
         $('#ClientPhoto').append ('<img src="' + addClientPhoto + '" width="130px" />');
     });
     $('#removeClientPhoto').click (function() {
         $('#ClientPhoto').empty ();
     });
-    
-    
+    /////////////////
+    //color Picker//
+    ////////////////
+       $('#addColor').click(function () {
+    	var addColor = $(".color").val();
+        $('rowHeader').append('background-color: #' + addColor';');
+    });
+
+
 });
+

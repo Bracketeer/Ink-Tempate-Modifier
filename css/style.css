@@ -1,0 +1,75 @@
+      
+      .edit-email{
+          background-color: #ebebeb;
+          width: 400px;
+          color: #ffffff;
+          position: fixed;
+          top: 0;
+          display: block;  
+          z-index:  10000;
+          left: 0;
+	      right: 0;
+          height: 100%;;
+          overflow: scroll;
+          
+      }
+      .form-container{
+      display: block;
+     margin: 0 auto;
+    padding: 0 0 10px 0; 
+    width: 100%;
+        
+          
+      }
+      .form-wrapper{
+        display: block;
+        padding: 0 10px;
+      }
+      
+      .buttons{
+        color: #ffffff;
+        background-color: #124062; 
+        border: solid 1px #0e3552;
+        padding: 15px 30px;
+        margin: 0 auto;  
+        width: 152px;  
+      }
+      .buttons:hover{
+        color: #ffffff;
+        background-color: #0e3552; 
+        border: solid 1px #124062;
+        padding: 15px 30px;
+        margin: 0 auto;  
+        width: 152px;  
+      }
+      form{
+        padding: 5px 0;      
+        margin: 5px auto;
+      }
+      input{
+        padding: 5px;
+        margin: 0 5px;
+        width: 360px;
+        height: 30px;  
+      }
+.banner{
+background: #124062;
+padding: 10px 20px;
+width:100%;
+overflow: visible;    
+}
+.displayNone{
+display: none;
+}
+.edit-email::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+.edit-email::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.3);
+}
+ 
+.edit-email::-webkit-scrollbar-thumb {
+  background-color:#e0e0e0;
+  outline: 1px solid #ebebeb;
+}
