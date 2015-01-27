@@ -1,38 +1,4 @@
-$(document).ready(function () {
-    /////////////////
-    //color Picker//
-    ////////////////
-     $('input.color').change(function () {
-        var addColor = $("input[name=color]").val(); 
-        $('.header').css({'background-color': addColor, 'border-color': addColor});
-        $('.color-blue').css('color', addColor);
-        $('.button td').css('background', addColor);
-
-        $('.background-image').css('background-color', addColor);
-        $('.background-image2').css('background-color', addColor);
-      });
-     /////////////////
-    //color Picker Secondary//
-    ////////////////
-     $('input#color2').change(function () {
-     var addColor2 = $("input[name=color2]").val();
-         $('table.secondary td').css({'background': addColor2, 'border-color': addColor2});
-});
-     /////////////////
-    //color Picker Primary Border and Rollover//
-    ////////////////
-     $('input#color3').change(function () {
-     var addColor3 = $("input[name=color3]").val();
-         //$('table.button td').css('border-color', addColor3);
-         $('.secondary:hover td').css('background', addColor3);
-  });
-     /////////////////
-    //color Picker Secondary//
-    ////////////////
-    // $('input#color4').change(function () {
-    // var addColor4 = $("input[name=color4]").val();
-    //     $('table.secondary td').css({'background': addColor4, 'border-color': addColor2});
-//});
+$(document).ready(function () { 
       //////////////////
     //Logo Image script//    
      //////////////////
@@ -40,21 +6,16 @@ $(document).ready(function () {
     $('#addLogo').click(function () {
         $('#rowHeader').removeClass('displayNone');
     	var addLogo = $("input[name=Logo]").val();
-        $('table.headerID').addClass('header');    
-        $('#Logoimage').attr("height", "75px");
-        if(addLogo === "Logo URL"){   
-        $('#Logoimage').attr("src", "http://placehold.it/150x75")
-        }
+        if(addLogo === 'Logo URL'){
+        $('#Logo').empty ();    
+        $('#Logo').append ('<img src="http://placehold.it/150x75" />')}
             else{
-         $('img#Logoimage').attr("src", addLogo);    
-            }
+        $('#Logo').empty();    
+         $('#Logo').append ('<img src="' + addLogo + '" height="75px" />')}
     });
         
     $('#removeLogo').click (function() {
-        
-        $('img#Logoimage').removeAttr('src');
-        $('img#Logoimage').removeAttr('height');
-        $('table.headerID').removeClass('header'); 
+        $('#rowHeader').addClass('displayNone');
         
     });   
       ///////////////////
@@ -83,18 +44,20 @@ $(document).ready(function () {
     //Video Thumbnail script//
      ///////////////////////
     $('#addVideoThumbnail').click(function () {
+        $('#VideoThumbnail').empty ();
     	var addVideoThumbnail = $("input[name=VideoThumbnail]").val();
-        $('img#heroimage').attr("src", addVideoThumbnail);
+        $('#VideoThumbnail').append ('<img src="' + addVideoThumbnail + '" width="580px" height="auto" />');
     });
     $('#removeVideoThumbnail').click (function() {
-        $('img#heroimage').removeAttr('src');
+        $('#VideoThumbnail').empty ();
     });
       //////////////
     //Teaser script//
      //////////////
-    $('textarea#TeaserID').change(function () {
+    $('#addTeaser').click(function () {
+        $('#Teaser').empty ();
     	var addTeaser = $("textarea[name=Teaser]").val();
-        $('#Teaser').text(addTeaser);
+        $('#Teaser').append (addTeaser);
     });
     $('#removeTeaser').click (function() {
         $('#Teaser').empty ();
@@ -190,13 +153,22 @@ $(document).ready(function () {
      ///////////////////////
     //Client Thumbnail script//
      ///////////////////////
-    $("input.ClientPhoto").click(function () {
+    $('#addClientPhoto').click(function () {
         $('#ClientPhoto').empty ();
     	var addClientPhoto = $("input[name=ClientPhoto]").val();
         $('#ClientPhoto').append ('<img src="' + addClientPhoto + '" width="130px" />');
     });
     $('#removeClientPhoto').click (function() {
         $('#ClientPhoto').empty ();
+    });
+    /////////////////
+    //color Picker//
+    ////////////////
+       $('#addColor').click(function () {
+          var addColor = $("input[name=color]").val();
+            $('.header').removeAttr('background-color'); 
+            $('style').append('.header{background-color: ' + addColor + ';}');
+      
     });
 });
 

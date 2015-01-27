@@ -704,9 +704,12 @@ body.outlook p {
     display: inherit !important;
   }
 }
-
-  </style>
-  <style>
+    .header{
+    background-color: #124062;
+    }
+        .color-blue{
+      	color: #124062;
+      }
 
     table.facebook td {
       background: #3b5998;
@@ -745,11 +748,6 @@ body.outlook p {
       background:#ECF8FF;
       border-color: #b9e5ff;
     }
-
-    .header {
-        background: #124062;
-    }
-
     .footer .wrapper {
       background: #ebebeb;
     }
@@ -781,9 +779,6 @@ body.outlook p {
         padding-right: 10px !important;
       }
     }
-      .color-blue{
-      	color: #124062;
-      }
        .color-white{
           color: #FFFFFF;
       }
@@ -805,7 +800,7 @@ body.outlook p {
 <!--Home Value Report background image-->
       
        .background-image2{
-          background-image: url(https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/overlay-home-search-omaha-lower.png);
+          background-image: url('https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/overlay-home-search-omaha-lower.png');
            background-color: #124062;
         background-position: bottom center;
         background-repeat: no-repeat; 
@@ -835,13 +830,29 @@ body.outlook p {
             <div class="form-container">
             Client Primary Color:
             <form>
-            <input class="color" value="124062" id="color" name="color">
+                
+                <input class="color" value="124062" id="color" name="color"></form>
+            </div>
+             <div class="form-container">
+            Client Primary Border Color:
+            <form>
+                
+                <input class="color" value="124062" id="color3" name="color3"></form>
+            </div>
+            <div class="form-container">
+            Client Secondary Color:
+            <form>
+            <input class="color" value="124062" id="color2" name="color2">    
             </form>    
-                 <button class="buttons" id="addColor">Add</button>
-        </div>    
+        </div>
+         <div class="form-container">
+            Client Secondary Border Color:
+            <form>
+                
+                <input class="color" value="124062" id="color4" name="color4"></form>
+            </div>    
         <div class="form-container">
-            <div class="banner">
-            <h6>Logo URL:</h6> 
+            Logo URL:
             </div>    
             <form>
             <input type="text" name="Logo" value="Logo URL">
@@ -877,7 +888,7 @@ body.outlook p {
         <div class="form-container">
             Teaser Copy:<br>
             <form>
-            <textarea name="Teaser" placeholder="Teaser Copy" rows="8" cols="41">
+            <textarea name="Teaser" placeholder="Teaser Copy" rows="8" cols="41" id="TeaserID">
             </textarea >
             </form>    
             <button class="buttons" id="addTeaser">Add</button>
@@ -934,7 +945,7 @@ body.outlook p {
          <div class="form-container">
             Client Email Address: 
             <form>
-            <input type="text" name="ClientEmail" value="Client Email Address">
+            <input type="text" name="ClientEmail" value="Client Email Address" id="ClientEmail">
         </form>
             <button class="buttons" id="addClientEmail">Add</button>
             <button class="buttons" id="removeClientEmail">Remove</button>
@@ -942,7 +953,7 @@ body.outlook p {
         <div class="form-container">
             Client Phone Number: 
             <form>
-            <input type="text" name="ClientPhone" value="Client Phone Number">
+            <input type="text" name="ClientPhone" value="Client Phone Number" id="ClientPhone">
         </form>
             <button class="buttons" id="addClientPhone">Add</button>
             <button class="buttons" id="removeClientPhone">Remove</button>
@@ -950,7 +961,7 @@ body.outlook p {
         <div class="form-container">
             Client Thumbnail Image: 
             <form>
-            <input type="text" name="ClientPhoto" value="Client Thumbnail Image">
+            <input type="text" name="ClientPhoto" value="Client Thumbnail Image" id="ClientPhoto">
         </form>
             <button class="buttons" id="addClientPhoto">Add</button>
             <button class="buttons" id="removeClientPhoto">Remove</button>
@@ -962,7 +973,7 @@ body.outlook p {
 			<td class="center" align="center" valign="top">
         <center>
 
-          <table class="row header color" id="color">
+          <table class="row header headerID">
         	<tr>
             	<td class="center" align="center">
                 	<center>
@@ -976,7 +987,7 @@ body.outlook p {
 
                             				<td class="six sub-columns" id="Logo">
 <!--Logo URL Goes Here-->                                
-<img src="https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/Vyral-Marketing-Partner-Logo.png" width="auto" height="75" />
+<img src="https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/Vyral-Marketing-Partner-Logo.png" width="auto" height="75" id="Logoimage" />
                                 
                             				</td>
                             				<td class="six sub-columns last">
@@ -1033,7 +1044,7 @@ body.outlook p {
 <a href="#" id="VideoThumbnail">  
 <!--Video Screenshot goes here !!!!!MUST BE EXPORTED FROM PHOTOSHOP AT EXACTLY 580px WIDE!!!!!-->     
     
-<img src="https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/v010-thumbnail-2smaller.png" width="580px" height="auto" />
+<img src="https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/v010-thumbnail-2smaller.png" width="580px" height="auto" id="heroimage" />
     
 <!--Blog post link and image end here-->    
 						
@@ -1135,7 +1146,7 @@ In this video, you're going to learn how to better follow up with our prospectin
     
 <!--link to the home search site ends here-->
     
-         				<table class="row color-blue" id="HomeSearchClone">
+         				<table class="row" id="HomeSearchClone">
                  			<tr>
                  				<td class="wrapper last background-image">
                         
@@ -1190,7 +1201,7 @@ In this video, you're going to learn how to better follow up with our prospectin
     
  <!--link to home value report ends here--> 
     
-             			<table class="row color-blue">
+             			<table class="row">
                 			<tr>
                      			<td class="wrapper last background-image2">
                         
@@ -1292,7 +1303,7 @@ In this video, you're going to learn how to better follow up with our prospectin
               </td>
             </tr>
           </table>
- <table class="row header">
+ <table class="row header headerID">
     <tr>
         <td class="wrapper last">
             <table class="twelve columns">

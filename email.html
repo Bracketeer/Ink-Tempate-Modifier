@@ -1,7 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-
+<!-- saved from url=(0076)file:///C:/Users/Brent/Documents/GitHub/Ink%20Template%20Modifier/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="./email_files/style.css">
+    <script src="./email_files/jquery.min.js"></script>
+     <script type="text/javascript" src="./email_files/jscolor.js"></script>
+    <script src="./email_files/jquery.min(1).js"></script>
+    <script type="text/javascript" src="./email_files/script.js"></script>
+	
+	<meta name="viewport" content="width=device-width">
 	<style>
 /**********************************************
 * Ink v1.0.5 - Copyright 2013 ZURB Inc        *
@@ -20,6 +26,7 @@ body{
   -ms-text-size-adjust:100%; 
   margin:0; 
   padding:0;
+    z-index: 1;
 }
 
 .ExternalClass { 
@@ -698,7 +705,7 @@ body.outlook p {
   }
 }
 
-  </style>
+  .header{background-color: #20623F;}</style>
   <style>
 
     table.facebook td {
@@ -740,7 +747,7 @@ body.outlook p {
     }
 
     .header {
-      background: #124062;
+        background: #124062;
     }
 
     .footer .wrapper {
@@ -791,6 +798,7 @@ body.outlook p {
         background-position: center center;
         background-repeat: no-repeat;  
         overflow: none; 
+          background-color: #124062;
         background-size: 580px auto;
       }
       
@@ -798,6 +806,7 @@ body.outlook p {
       
        .background-image2{
           background-image: url(https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/overlay-home-search-omaha-lower.png);
+           background-color: #124062;
         background-position: bottom center;
         background-repeat: no-repeat; 
         overflow: none; 
@@ -817,65 +826,191 @@ body.outlook p {
       }
       .home-links{
       	font-size: 18px;
-      }
-      
-	</style>
+      }      
+	.header{background-color: #20623F;}</style>
 </head>
 <body>
+    <div class="edit-email">
+        <div class="form-wrapper">
+            <div class="form-container">
+            Client Primary Color:
+            <form>
+            <input class="color" value="124062" id="color" name="color" autocomplete="off">
+            </form>    
+                 <button class="buttons" id="addColor">Add</button>
+        </div>    
+        <div class="form-container">
+            <div class="banner">
+            <h6>Logo URL:</h6> 
+            </div>    
+            <form>
+            <input type="text" name="Logo" value="Logo URL">
+        </form>
+            <button class="buttons" id="addLogo">Add</button>
+            <button class="buttons" id="removeLogo">Remove</button>
+        </div>
+        <div class="form-container">
+            SubHeadline:
+            <form class="form">
+             
+            <input type="text" name="subheadline" value="SubHeadline">
+            </form>
+            <button class="buttons" id="addSubheadline">Add</button>
+            <button class="buttons" id="removeSubheadline">Remove</button>
+        </div>
+        <div class="form-container">
+            Headline: 
+            <form>
+            <input type="text" name="headline" value="Headline">
+        </form>
+            <button class="buttons" id="addheadline">Add</button>
+            <button class="buttons" id="removeheadline">Remove</button>
+        </div>
+        <div class="form-container">
+            Video Thumbnail URL: 
+            <form>
+            <input type="text" name="VideoThumbnail" value="Video Thumbnail URL">
+        </form>
+            <button class="buttons" id="addVideoThumbnail">Add</button>
+            <button class="buttons" id="removeVideoThumbnail">Remove</button>
+        </div>
+        <div class="form-container">
+            Teaser Copy:<br>
+            <form>
+            <textarea name="Teaser" placeholder="Teaser Copy" rows="8" cols="41">            </textarea>
+            </form>    
+            <button class="buttons" id="addTeaser">Add</button>
+            <button class="buttons" id="removeTeaser">Remove</button>
+        </div>
+        <div class="form-container">
+            YouTube URL: 
+            <form>
+            <input type="text" name="YoutubeURL" value="YouTube URL">
+        </form>
+            <button class="buttons" id="addYoutubeURL">Add</button>
+            <button class="buttons" id="removeYoutubeURL">Remove</button>
+        </div>
+        <div class="form-container">
+            Secondary CTA URL: 
+            <form>
+            <input type="text" name="SecondaryCTA" value="Secondary CTA URL">
+        </form>
+            <button class="buttons" id="addSecondaryCTA">Add</button>
+            <button class="buttons" id="removeSecondaryCTA">Remove</button>
+        </div>
+        <div class="form-container">
+            Home Search URL: 
+            <form>
+            <input type="text" name="HomeSearch" value="HomeSearch URL">
+        </form>
+            <button class="buttons" id="addHomeSearch">Add</button>
+            <button class="buttons" id="removeHomeSearch">Remove</button>
+        </div>
+        <div class="form-container">
+            CTA Box Location: 
+            <form>
+            <input type="text" name="CTALocation" value="CTA Location">
+        </form>
+            <button class="buttons" id="addCTALocation">Add</button>
+            <button class="buttons" id="removeCTALocation">Remove</button>
+        </div>
+        <div class="form-container">
+            Home Value URL: 
+            <form>
+            <input type="text" name="HomeValue" value="Home Value URL">
+        </form>
+            <button class="buttons" id="addHomeValue">Add</button>
+            <button class="buttons" id="removeHomeValue">Remove</button>
+        </div>
+         <div class="form-container">
+            Client Name: 
+            <form>
+            <input type="text" name="ClientName" value="Client Name">
+        </form>
+            <button class="buttons" id="addClientName">Add</button>
+            <button class="buttons" id="removeClientName">Remove</button>
+        </div>
+         <div class="form-container">
+            Client Email Address: 
+            <form>
+            <input type="text" name="ClientEmail" value="Client Email Address">
+        </form>
+            <button class="buttons" id="addClientEmail">Add</button>
+            <button class="buttons" id="removeClientEmail">Remove</button>
+        </div>
+        <div class="form-container">
+            Client Phone Number: 
+            <form>
+            <input type="text" name="ClientPhone" value="Client Phone Number">
+        </form>
+            <button class="buttons" id="addClientPhone">Add</button>
+            <button class="buttons" id="removeClientPhone">Remove</button>
+        </div>
+        <div class="form-container">
+            Client Thumbnail Image: 
+            <form>
+            <input type="text" name="ClientPhoto" value="Client Thumbnail Image">
+        </form>
+            <button class="buttons" id="addClientPhoto">Add</button>
+            <button class="buttons" id="removeClientPhoto">Remove</button>
+        </div>
+            </div>
+    </div>    
 	<table class="body">
-		<tr>
+		<tbody><tr>
 			<td class="center" align="center" valign="top">
         <center>
 
-          <table class="row header">
-        	<tr>
+          <table class="row header color" id="color">
+        	<tbody><tr>
             	<td class="center" align="center">
                 	<center>
 
 						<table class="container">
-                    		<tr>
+                    		<tbody><tr>
                       			<td class="wrapper last">
 
                         			<table class="twelve columns">
-                          				<tr>
+                          				<tbody><tr>
 
-                            				<td class="six sub-columns">
+                            				<td class="six sub-columns" id="Logo">
 <!--Logo URL Goes Here-->                                
-<img src="https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/Vyral-Marketing-Partner-Logo.png" width="auto" height="75" />
+<img src="./email_files/Vyral-Marketing-Partner-Logo.png" width="auto" height="75">
                                 
                             				</td>
                             				<td class="six sub-columns last">
                             				</td>
                             				<td class="expander"></td>
                           				</tr>
-                        			</table>
+                        			</tbody></table>
 
                       			</td>
                     		</tr>
-                  		</table>
+                  		</tbody></table>
 
                 	</center>
               	</td>
             </tr>
-		</table>
+		</tbody></table>
         
-        <br>           
+        <br>
+     
         <table class="container">
-        	<tr>
+        	<tbody><tr>
             	<td>
 
                 	<table class="row">
-                  		<tr>
+                  		<tbody><tr>
                     		<td class="wrapper last">
 
                       			<table class="twelve columns">
-                        			<tr>
+                        			<tbody><tr>
                           				<td>
                               
 <!--Headline Color Goes in the h6 class here-->   
                               
-											<h6 id="subheadline" class="color-blue">
-                                              
+											<h6 class="color-blue">
+<b id="subheadline">Marketing Tip:</b>                                              
 <!--Sub Headline Goes Here-->                                       
                                 
                                         	</h6>
@@ -883,7 +1018,7 @@ body.outlook p {
                           					<br>
         
                             				<h4 class="center">
-                                				<b>
+                                				<b id="headline">
 <!--main headline goes here-->                                     
 6 Lead Conversion Sequences You Need to Grow Your Business Quickly
 <!--Headline ends here-->                                
@@ -894,10 +1029,10 @@ body.outlook p {
                 			
                             				<p class="lead">Press play to watch:</p>
 <!--Link to blog post goes here-->                            
-<a href="#">  
+<a href="file:///C:/Users/Brent/Documents/GitHub/Ink%20Template%20Modifier/index.html#" id="VideoThumbnail">  
 <!--Video Screenshot goes here !!!!!MUST BE EXPORTED FROM PHOTOSHOP AT EXACTLY 580px WIDE!!!!!-->     
     
-<img src="https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/v010-thumbnail-2smaller.png" width="580px" height="auto" />
+<img src="./email_files/v010-thumbnail-2smaller.png" width="580px" height="auto">
     
 <!--Blog post link and image end here-->    
 						
@@ -905,23 +1040,23 @@ body.outlook p {
                           				</td>
                           				<td class="expander"></td>
                         			</tr>
-                      			</table>
+                      			</tbody></table>
 
                     		</td>
                   		</tr>
-              		</table>
+              		</tbody></table>
 
                 	<table class="row callout">
-                  		<tr>
+                  		<tbody><tr>
                     		<td class="wrapper last">
 
                       			<table class="twelve columns">
-                        			<tr>
+                        			<tbody><tr>
                           				<td class="panel center">
 
                             				<p align="center">
                                 
-                                				<center>
+                                				</p><center id="Teaser">
 <!--Teaser sentence goes here--> 
                                                     
 In this video, you're going to learn how to better follow up with our prospecting using email and your phone. You'll also learn my top recommended services to get all this done for you.
@@ -929,32 +1064,32 @@ In this video, you're going to learn how to better follow up with our prospectin
 <!--Teaser sentence ends here-->
                                 
                                                 </center>
-                            				</p>
+                            				<p></p>
 
                           				</td>
                           				<td class="expander"></td>
                         			</tr>
-                      			</table>
+                      			</tbody></table>
 								
                                 <br>
                     		
                             </td>
                   		</tr>
-              		</table>
+              		</tbody></table>
 
                 	<table class="row">
-                  		<tr>
+                  		<tbody><tr>
                     		<td class="wrapper">
 
                       			<table class="six columns">
-                      		  		<tr>
+                      		  		<tbody><tr>
                           				<td>
 
                             				<table class="button">
-                              					<tr>
-                                					<td>
+                              					<tbody><tr>
+                                					<td id="YoutubeURL">
 <!--Link to blog post goes here-->                                                        
-<a href="#">
+<a href="file:///C:/Users/Brent/Documents/GitHub/Ink%20Template%20Modifier/index.html#">
                                       
                                       						Watch the Video »
                                                         
@@ -962,61 +1097,61 @@ In this video, you're going to learn how to better follow up with our prospectin
                                                         
                                 					</td>
                               					</tr>
-                            				</table>
+                            				</tbody></table>
 
                           				</td>
                             			<td class="expander"></td>
                         			</tr>
-                      			</table>
+                      			</tbody></table>
                       		</td>
                       		<td class="wrapper last">
                       			<table class="six columns">
-                        			<tr>
+                        			<tbody><tr>
                           				<td>
 
                             				<table class="button secondary">
-                              					<tr>
+                              					<tbody><tr>
                              						<td>
-                                  						<a href="#">
+                                  						<a href="file:///C:/Users/Brent/Documents/GitHub/Ink%20Template%20Modifier/index.html#" id="SecondaryCTA">
                                       						Get a Free Consultation »
                                 						</a>
                              						</td>
                              	 				</tr>
-                            				</table>
+                            				</tbody></table>
 
                           				</td>
                             			<td class="expander"></td>
                         			</tr>
-                      			</table>
+                      			</tbody></table>
                         
-                  			</tr>
-              			</table>
+                  			</td></tr>
+              			</tbody></table>
                   
                     	<br>
 <!--link to the home search site starts here-->
-                    
-<a href="#">
+<table id="HomeSearchPlaceHolder"></table>                    
+<a href="file:///C:/Users/Brent/Documents/GitHub/Ink%20Template%20Modifier/index.html#" id="HomeSearch">
     
 <!--link to the home search site ends here-->
     
-         				<table class="row">
-                 			<tr>
+         				<table class="row color-blue" id="HomeSearchClone">
+                 			<tbody><tr>
                  				<td class="wrapper last background-image">
                         
                         			<table class="twelve columns">
-                        				<tr>
+                        				<tbody><tr>
                                 			<td class="sub-grid">
                                     			<table>
-                                        			<tr>
+                                        			<tbody><tr>
                                             			<td class="three sub-columns">
                                                     
-                                                    		<img src="https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/home-search--icon-130.png" class="center" />
+                                                    		<img src="./email_files/home-search--icon-130.png" class="center">
                                                 
                                 						</td>
                                				
                                             			<td class="nine sub-columns">
                                     						<h4 class="color-white">
-                                            					<b> 
+                                            					<b id="CTALocation"> 
                                                         			Full Omaha Home Search
                                                         		</b>   
                                         					</h4>
@@ -1028,7 +1163,7 @@ In this video, you're going to learn how to better follow up with our prospectin
                                         					</p>
 <!--link to the home search site starts here-->
                                                             
-<a href="#" class="hide-for-small">
+<a href="file:///C:/Users/Brent/Documents/GitHub/Ink%20Template%20Modifier/index.html#" class="hide-for-small">
     
 <!-- link to the home search ends here-->                                            					
     															<b class="color-white home-links">
@@ -1037,36 +1172,36 @@ In this video, you're going to learn how to better follow up with our prospectin
                                         					</a>
                                             			</td>
                                         			</tr>
-                                    			</table>
+                                    			</tbody></table>
                                 			</td>
                             			</tr>
-                        			</table>
+                        			</tbody></table>
                     			</td>
                 			</tr>
-           				</table>
+           				</tbody></table>
     	 			</a>
                   
  					<br>
                     
 <!--link to home value report goes here-->
                     
-<a href="#">
+<a href="file:///C:/Users/Brent/Documents/GitHub/Ink%20Template%20Modifier/index.html#" id="HomeValue">
     
  <!--link to home value report ends here--> 
     
-             			<table class="row">
-                			<tr>
+             			<table class="row color-blue">
+                			<tbody><tr>
                      			<td class="wrapper last background-image2">
                         
-                        			<table class="twelve columns">
-                            			<tr>
+                        			<table class="twelve columns ">
+                            			<tbody><tr>
                                 			<td class="sub-grid">
                                     			
                                                 <table>
-                                        			<tr>
+                                        			<tbody><tr>
                                             			<td class="three sub-columns">
 
-                                                    		<img src="https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/home-value-icon-130.png" class="center" />
+                                                    		<img src="./email_files/home-value-icon-130.png" class="center">
                                     					
                                                         </td>
                                                
@@ -1083,7 +1218,7 @@ In this video, you're going to learn how to better follow up with our prospectin
                                                 			<p class="color-white hide-for-small">
                                                     			Enter your property address for a quote.
 															</p>        
-<a href="#" class="hide-for-small">
+<a href="file:///C:/Users/Brent/Documents/GitHub/Ink%20Template%20Modifier/index.html#" class="hide-for-small">
                                                     				<b class="color-white home-links">
                                                         	 
                                                         			Click here to find out more information »
@@ -1092,126 +1227,127 @@ In this video, you're going to learn how to better follow up with our prospectin
                                                 </a>
                                             </td>
                                         </tr>
-                                    </table>
+                                    </tbody></table>
                                 </td>
                             </tr>
-                        </table>
+                        </tbody></table>
                     </td>
                 </tr>
-            </table>
+            </tbody></table>
          </a>
                   
 <br>
                   
     			<table class="row">
-                  <tr>
+                  <tbody><tr>
                     <td class="wrapper">
 
                       <table class="three columns">
-                        <tr>
+                        <tbody><tr>
                           <td align="center">
                             <center>
-                              <p class="color-blue contact-text" style="text-align:center;">John Doe</p>
+                              <p class="color-blue contact-text" style="text-align:center;" id="ClientName">John Doe</p>
                             </center>
                           </td>
                           <td class="expander"></td>
                         </tr>
-                      </table>
+                      </tbody></table>
                         
                     </td>
                      <td class="wrapper">
 
                       <table class="six columns">
-                        <tr>
+                        <tbody><tr>
                           <td align="center">
                             <center>
-                              <p class="color-blue  contact-text" style="text-align:center;"><a href="#">Someone@GetVyral.com</a></p>
+                              <p class="color-blue  contact-text" style="text-align:center;">
+                                  <a id="ClientEmail" href="file:///C:/Users/Brent/Documents/GitHub/Ink%20Template%20Modifier/index.html#">Someone@GetVyral.com</a></p>
                             </center>
                           </td>
                           <td class="expander"></td>
                         </tr>
-                      </table>
+                      </tbody></table>
                         
                     </td>
                      <td class="wrapper last">
 
                       <table class="three columns">
-                        <tr>
+                        <tbody><tr>
                           <td align="center">
                             <center>
-                              <p class="color-blue  contact-text" style="text-align:center;">402-555-5555</p>
+                              <p class="color-blue  contact-text" style="text-align:center;" id="ClientPhone">402-555-5555</p>
                             </center>
                           </td>
                           <td class="expander"></td>
                         </tr>
-                      </table>
+                      </tbody></table>
                         
                     </td>  
                   </tr>
-                </table>
+                </tbody></table>
                
 
                 <!-- container end below -->
               </td>
             </tr>
-          </table>
+          </tbody></table>
  <table class="row header">
-    <tr>
+    <tbody><tr>
         <td class="wrapper last">
             <table class="twelve columns">
-               	<tr>
+               	<tbody><tr>
                     <td class="left-text-pad">
                      	<h6 class="color-white">
                             About Our Company:
                          </h6>
                     </td>
                 </tr>
-         	</table>
+         	</tbody></table>
          </td>
      </tr>
-</table>
+</tbody></table>
 <table class="row background-footer">
-    <tr>
+    <tbody><tr>
      	<td class="center" align="center">
              <center>
              	<table class="container">
-                	<tr>
+                	<tbody><tr>
                     	<td class="wrapper panel">
                         
                             <table class="three columns center">
-                            	<tr>
+                            	<tbody><tr>
                                 	<td class="center">
                                     
-                                        <center>
+                                        <center id="ClientPhoto">
                                     	
-                                            <img class="center" src="https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/frank-klesitz-130.png" />
+                                            <img class="center" src="./email_files/frank-klesitz-130.png">
                                             
                                         </center>
                                         
                                     </td>
                                     <td class="expander"></td>    
                                 </tr>
-                            </table>
+                            </tbody></table>
                        	
-                        <td class="wrapper last panel">
+                        </td><td class="wrapper last panel">
                         
                             <table class="nine columns">
-                            	<tr>
+                            	<tbody><tr>
                                 	<td class="text-pad">
                  							<p>Vyral Marketing helps you get more sales from your customer database. We interview you on a HD webcam to educate your customer database with video to grow sales - we do all the work for you. We edit your video, write your articles, send your email, update your social media, and more.</p>
                                 		</td>
                             		</tr>
-                        		</table>
+                        		</tbody></table>
                             </td>
                         </tr>
-                    </table>
+                    </tbody></table>
            </center>
         </td>
     </tr>
-</table>
+</tbody></table>
         </center>
 			</td>
 		</tr>
-	</table>
-</body>
-</html>
+	</tbody></table>
+
+</body></html>
