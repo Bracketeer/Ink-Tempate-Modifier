@@ -82,7 +82,7 @@ $(document).ready(function () {
  
 //Video Thumbnail script//
 
-    $('a#VideoThumbnail').keyup(function () {
+    $('#VideoThumbnail').keyup(function () {
     	var addVideoThumbnail = $("input[name=VideoThumbnail]").val();
         $('#VideoThumbnailID').attr("src", addVideoThumbnail);
     });
@@ -98,7 +98,7 @@ $(document).ready(function () {
     
     $('#YoutubeURLID').keyup(function () {
     	var addYoutubeURL = $("input[name=YoutubeURL]").val();
-        $('#YoutubeURL').attr("href", addYoutubeURL);
+        $('a#YoutubeURL').attr("href", addYoutubeURL);
     });
 //Secondary CTA URL script//
 
