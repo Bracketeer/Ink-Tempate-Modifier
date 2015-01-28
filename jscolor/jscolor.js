@@ -349,16 +349,16 @@ var jscolor = {
 
 		this.pickerOnfocus = true; // display picker on focus?
 		this.pickerMode = 'HSV'; // HSV | HVS
-		this.pickerPosition = 'bottom'; // left | right | top | bottom
+		this.pickerPosition = 'right'; // left | right | top | bottom
 		this.pickerSmartPosition = true; // automatically adjust picker position when necessary
 		this.pickerButtonHeight = 20; // px
 		this.pickerClosable = true;
 		this.pickerCloseText = 'Close';
 		this.pickerButtonColor = 'ButtonText'; // px
 		this.pickerFace = 10; // px
-		this.pickerFaceColor = 'ThreeDFace'; // CSS color
+		this.pickerFaceColor = '#ebebeb'; // CSS color
 		this.pickerBorder = 1; // px
-		this.pickerBorderColor = 'ThreeDHighlight ThreeDShadow ThreeDShadow ThreeDHighlight'; // CSS color
+		this.pickerBorderColor = '#C7C7C7';//'ThreeDHighlight ThreeDShadow ThreeDShadow ThreeDHighlight'; // CSS color
 		this.pickerInset = 1; // px
 		this.pickerInsetColor = 'ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow'; // CSS color
 		this.pickerZIndex = 10000;
@@ -700,7 +700,7 @@ var jscolor = {
 			p.box.style.height = dims[1] + 'px';
 
 			// picker border
-			p.boxB.style.position = 'absolute';
+			p.boxB.style.position = 'fixed';
 			p.boxB.style.clear = 'both';
 			p.boxB.style.left = x+'px';
 			p.boxB.style.top = y+'px';

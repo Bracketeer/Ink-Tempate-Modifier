@@ -547,10 +547,10 @@ table.secondary td a {
   color: #FFFFFF;
 }
 
-table.secondary:hover td {
+/*table.secondary:hover td {
   background: #df661f !important;
   color: #555;
-}
+}*/
 
 table.secondary:hover td a,
 table.secondary td a:visited,
@@ -828,13 +828,20 @@ body.outlook p {
     <div class="edit-email">
         <div class="form-wrapper">
             <div class="form-container">
+            Client Primary Hover Color:
+            <form>
+                
+                <input class="color" value="124062" id="color4" name="color4"></form>
+            </div>    
+            <div class="form-container">
             Client Primary Color:
             <form>
                 
                 <input class="color" value="124062" id="color" name="color"></form>
             </div>
-             <div class="form-container">
-            Client Primary Border Color:
+            
+             <div class="form-container">     
+            Client Secondary Hover Color:
             <form>
                 
                 <input class="color" value="124062" id="color3" name="color3"></form>
@@ -845,62 +852,46 @@ body.outlook p {
             <input class="color" value="124062" id="color2" name="color2">    
             </form>    
         </div>
-         <div class="form-container">
-            Client Secondary Border Color:
-            <form>
-                
-                <input class="color" value="124062" id="color4" name="color4"></form>
-            </div>    
+         
         <div class="form-container">
             Logo URL:
             </div>    
             <form>
-            <input type="text" name="Logo" value="Logo URL">
+            <input type="text" name="Logo" value="Logo URL" id="LogoID">
         </form>
-            <button class="buttons" id="addLogo">Add</button>
-            <button class="buttons" id="removeLogo">Remove</button>
+            <button class="buttons" id="removeLogo">Remove Header</button>
         </div>
         <div class="form-container">
             SubHeadline:
             <form class="form">
-             
-            <input type="text" name="subheadline" value="SubHeadline">
+            <input type="text" name="subheadline" value="SubHeadline" id="SubHeadlineID">
             </form>
-            <button class="buttons" id="addSubheadline">Add</button>
-            <button class="buttons" id="removeSubheadline">Remove</button>
         </div>
         <div class="form-container">
             Headline: 
             <form>
-            <input type="text" name="headline" value="Headline">
+            <input type="text" name="headline" value="Headline" id="HeadlineID">
         </form>
-            <button class="buttons" id="addheadline">Add</button>
-            <button class="buttons" id="removeheadline">Remove</button>
         </div>
         <div class="form-container">
             Video Thumbnail URL: 
             <form>
-            <input type="text" name="VideoThumbnail" value="Video Thumbnail URL">
+            <input type="text" name="VideoThumbnail" value="Video Thumbnail URL" id="VideoThumbnail">
         </form>
-            <button class="buttons" id="addVideoThumbnail">Add</button>
-            <button class="buttons" id="removeVideoThumbnail">Remove</button>
         </div>
         <div class="form-container">
             Teaser Copy:<br>
             <form>
-            <textarea name="Teaser" placeholder="Teaser Copy" rows="8" cols="41" id="TeaserID">
+            <textarea name="Teaser" placeholder="Teaser Copy" rows="8" cols="50" id="TeaserID">
             </textarea >
             </form>    
-            <button class="buttons" id="addTeaser">Add</button>
-            <button class="buttons" id="removeTeaser">Remove</button>
+
         </div>
         <div class="form-container">
             YouTube URL: 
             <form>
-            <input type="text" name="YoutubeURL" value="YouTube URL">
+            <input type="text" name="YoutubeURL" value="YouTube URL" id="YoutubeURLID">
         </form>
-            <button class="buttons" id="addYoutubeURL">Add</button>
-            <button class="buttons" id="removeYoutubeURL">Remove</button>
         </div>
         <div class="form-container">
             Secondary CTA URL: 
@@ -937,34 +928,26 @@ body.outlook p {
          <div class="form-container">
             Client Name: 
             <form>
-            <input type="text" name="ClientName" value="Client Name">
+            <input type="text" name="ClientName" value="Client Name" id="ClientNameID">
         </form>
-            <button class="buttons" id="addClientName">Add</button>
-            <button class="buttons" id="removeClientName">Remove</button>
         </div>
          <div class="form-container">
             Client Email Address: 
             <form>
-            <input type="text" name="ClientEmail" value="Client Email Address" id="ClientEmail">
+            <input type="text" name="ClientEmail" value="Client Email Address" id="ClientEmailID">
         </form>
-            <button class="buttons" id="addClientEmail">Add</button>
-            <button class="buttons" id="removeClientEmail">Remove</button>
         </div>
         <div class="form-container">
             Client Phone Number: 
             <form>
             <input type="text" name="ClientPhone" value="Client Phone Number" id="ClientPhone">
-        </form>
-            <button class="buttons" id="addClientPhone">Add</button>
-            <button class="buttons" id="removeClientPhone">Remove</button>
+        </form>      
         </div>
         <div class="form-container">
             Client Thumbnail Image: 
             <form>
             <input type="text" name="ClientPhoto" value="Client Thumbnail Image" id="ClientPhoto">
         </form>
-            <button class="buttons" id="addClientPhoto">Add</button>
-            <button class="buttons" id="removeClientPhoto">Remove</button>
         </div>
             </div>
     </div>    
@@ -1022,7 +1005,7 @@ body.outlook p {
 <!--Headline Color Goes in the h6 class here-->   
                               
 											<h6 class="color-blue">
-<b  id="subheadline">Marketing Tip:</b>                                              
+<b id="subheadline">Marketing Tip:</b>                                              
 <!--Sub Headline Goes Here-->                                       
                                 
                                         	</h6>
@@ -1041,10 +1024,10 @@ body.outlook p {
                 			
                             				<p class="lead">Press play to watch:</p>
 <!--Link to blog post goes here-->                            
-<a href="#" id="VideoThumbnail">  
+<a href="#" id="YoutubeURL">  
 <!--Video Screenshot goes here !!!!!MUST BE EXPORTED FROM PHOTOSHOP AT EXACTLY 580px WIDE!!!!!-->     
     
-<img src="https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/v010-thumbnail-2smaller.png" width="580px" height="auto" id="heroimage" />
+<img src="https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/v010-thumbnail-2smaller.png" width="580px" height="auto" id="VideoThumbnailID" />
     
 <!--Blog post link and image end here-->    
 						
@@ -1096,21 +1079,21 @@ In this video, you're going to learn how to better follow up with our prospectin
                       			<table class="six columns">
                       		  		<tr>
                           				<td>
-
+<a href="#" id="YoutubeURL">
                             				<table class="button">
                               					<tr>
-                                					<td id="YoutubeURL">
+                                					<td>
 <!--Link to blog post goes here-->                                                        
-<a href="#">
+
                                       
                                       						Watch the Video »
                                                         
-                                    					</a>
+                                    					
                                                         
                                 					</td>
                               					</tr>
                             				</table>
-
+</a>
                           				</td>
                             			<td class="expander"></td>
                         			</tr>
@@ -1287,7 +1270,7 @@ In this video, you're going to learn how to better follow up with our prospectin
                         <tr>
                           <td align="center">
                             <center>
-                              <p class="color-blue  contact-text" style="text-align:center;" id="ClientPhone">402-555-5555</p>
+                              <p class="color-blue  contact-text" style="text-align:center;" id="ClientPhoneNumber">402-555-5555</p>
                             </center>
                           </td>
                           <td class="expander"></td>
@@ -1324,15 +1307,15 @@ In this video, you're going to learn how to better follow up with our prospectin
              <center>
              	<table class="container">
                 	<tr>
-                    	<td class="wrapper panel">
+                    	<td class="wrapper panel footerImage" id="footerImage">
                         
                             <table class="three columns center">
                             	<tr>
                                 	<td class="center">
                                     
-                                        <center id="ClientPhoto">
+                                        <center>
                                     	
-                                            <img class="center" src="https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/frank-klesitz-130.png" />
+                                            <img class="center" src="https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/frank-klesitz-130.png" id="ClientPhotoID" />
                                             
                                         </center>
                                         
@@ -1340,10 +1323,10 @@ In this video, you're going to learn how to better follow up with our prospectin
                                     <td class="expander"></td>    
                                 </tr>
                             </table>
-                       	
+                        </td>
                         <td class="wrapper last panel">
                         
-                            <table class="nine columns">
+                            <table class="nine columns" id="footerText">
                             	<tr>
                                 	<td class="text-pad">
                  							<p>Vyral Marketing helps you get more sales from your customer database. We interview you on a HD webcam to educate your customer database with video to grow sales - we do all the work for you. We edit your video, write your articles, send your email, update your social media, and more.</p>
