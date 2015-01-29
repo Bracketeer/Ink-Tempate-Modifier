@@ -9,7 +9,7 @@ $(document).ready(function () {
         $('table.button td').css('background', addColor);
         $('.background-image').css('background-color', addColor);
         $('.background-image2').css('background-color', addColor);
-      });
+     });
     
 
 //color Picker Primary Border and Rollover//
@@ -18,7 +18,7 @@ $(document).ready(function () {
         var addColor = $("input[name=color]").val();     
         var addColor4 = $("input[name=color4]").val();
         
-        $('style').append('table.button:hover td, table.button:visited td, table.button:active td { background:' + addColor4 + '!important; }');
+        $('style').append('table.button:hover td, table.button:visited td, table.button:active td { background:' + addColor4 + '!important;}');
          
  });
 
@@ -26,7 +26,7 @@ $(document).ready(function () {
 
      $('input#color2').change(function () {
         var addColor3 = $("input[name=color3]").val();     
-        var addColor2 = $("input[name=color2]").val();
+        var addColor2 = $("input[name=color2]").val(); 
          
         $('table.secondary td').css({'background': addColor2, 'border-color': addColor3});
 });
@@ -37,7 +37,7 @@ $(document).ready(function () {
         var addColor2 = $("input[name=color2]").val();     
         var addColor3 = $("input[name=color3]").val();
         
-        $('style').append('table.secondary:hover td { background:' + addColor3 + '!important; color: #555; border-color: 5px' + addColor2 + ';}');
+        $('style').append('table.secondary:hover td { background:' + addColor3 + '!important; color: #ffffff; border-color: 5px' + addColor2 + ';}');
          
   });
     
@@ -51,7 +51,7 @@ $(document).ready(function () {
         $('table.headerID').addClass('header');    
         $('#Logoimage').attr("height", "75px");
         if(addLogo === "Logo URL"){   
-        $('#Logoimage').attr("src", "http://placehold.it/150x75")
+        $('#Logoimage').replaceWith('<img src="' + Logo + '" width="auto" height="75px" id="Logoimage">');
         }
             else{
          $('img#Logoimage').attr("src", addLogo);    
@@ -86,6 +86,13 @@ $(document).ready(function () {
     	var addVideoThumbnail = $("input[name=VideoThumbnail]").val();
         $('#VideoThumbnailID').attr("src", addVideoThumbnail);
     });
+
+//Blog Post URL script//
+    
+    $('#BlogPostURLID').keyup(function () {
+    	var addBlogPostURL = $("input[name=BlogPostURL]").val();
+        $('a#BlogPostURL').attr("href", addBlogPostURL);
+    });    
     
     //Teaser script//
 
@@ -102,31 +109,25 @@ $(document).ready(function () {
     });
 //Secondary CTA URL script//
 
-    $('#addSecondaryCTA').click(function () {
+    $('#SecondaryCTAID').keyup(function () {
     	var addSecondaryCTA = $("input[name=SecondaryCTA]").val();
         $('#SecondaryCTA').attr("href", addSecondaryCTA);
     });
-    $('#removeSecondaryCTA').click (function() {
-        $('#SecondaryCTA').empty ();
-    });
+
 
 //Home Search script//
 
-    $('#addHomeSearch').click(function () {
+    $('#HomeSearchID').keyup(function () {
         var addHomeSearch = $("input[name=HomeSearch]").val();
-        $('#HomeSearch').attr("href", addHomeSearch);
+        $('a#HomeSearch').attr("href", addHomeSearch);
         
   });
-    $('#removeHomeSearch').click (function() {
-        $('#HomeSearch').empty ();
-    });
-
+    
 //Home value location script//
 
-    $('#addCTALocation').click(function () {
-        $('#CTALocation').empty ();
+    $('#CTALocationID').keyup(function () {
         var addCTALocation = $("input[name=CTALocation]").val();
-        $('#CTALocation').append('<b>Full ' + addCTALocation + ' Home Search</b>');
+        $('#CTALocation').text(addCTALocation);
         
   });
     $('#removeHomeValueLocation').click (function() {
@@ -135,14 +136,11 @@ $(document).ready(function () {
 
 //Home value script//
 
-    $('#addHomeValue').click(function () {
+    $('#HomeValueID').keyup(function () {
         var addHomeValue = $("input[name=HomeValue]").val();
-        $('#HomeValue').attr('href', addHomeValue);
+        $('a#HomeValue').attr('href', addHomeValue);
         
   });
-    $('#removeHomeValue').click (function() {
-        $('#HomeValue').empty ();
-    });
 
 //Client Name script//
 
@@ -151,9 +149,6 @@ $(document).ready(function () {
         $('#ClientName').text(addClientName);
         
   });
-    $('#removeClientName').click (function() {
-        $('#ClientName').empty ();
-    });
 
 //Client Email script//
 
@@ -177,6 +172,27 @@ $(document).ready(function () {
     	var addClientPhoto = $("input[name=ClientPhoto]").val();
         $('#ClientPhotoID').attr('src', addClientPhoto);
     });
+    
+//Client Thumbnail script//
+
+    $("#ClientDescriptionID").keyup(function () {
+    	var addClientDescription = $("input[name=ClientDescription]").val();
+        $('#ClientDescription').text(addClientDescription);
+    });    
    
+//Submit Form Script//    
+    
+    $('#submit-button').click(function (){
+        if (confirm("ARE YOU SURE? You can't undo this. Once you hit okay, you will not be able to go back and edit this again. BE SURE TO DOUBLE CHECK YOUR WORK!!!!!!"))
+        {
+            $('#edit-email').remove();
+            alert("shit's done");
+            $('div#scripts').remove();
+        }
+        else{
+            return false;
+        }
+            });
 });
+
 

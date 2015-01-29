@@ -1,11 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" id="emailcode">
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <div id="scripts">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
      <script type="text/javascript" src="jscolor/jscolor.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    </div>    
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width"/>
 	<style>
@@ -540,7 +542,7 @@ table.large-button td a:visited {
 table.secondary td {
   background: #EF6D21;
   border-color: #a54b17;
-  color: #555;
+  color: #fff;
 }
 
 table.secondary td a {
@@ -800,7 +802,7 @@ body.outlook p {
 <!--Home Value Report background image-->
       
        .background-image2{
-          background-image: url('https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/overlay-home-search-omaha-lower.png');
+          background-image: url(https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/overlay-home-search-omaha-lower.png);
            background-color: #124062;
         background-position: bottom center;
         background-repeat: no-repeat; 
@@ -817,7 +819,7 @@ body.outlook p {
 <!--background color for the "about our comanpany" row-->
       
       .background-footer{
-      	background-color: #ebebeb;
+      	background-color: #ebebeb;  
       }
       .home-links{
       	font-size: 18px;
@@ -825,109 +827,106 @@ body.outlook p {
 	</style>
 </head>
 <body>
-    <div class="edit-email">
-        <div class="form-wrapper">
-            <div class="form-container">
-            Client Primary Hover Color:
-            <form>
-                
-                <input class="color" value="124062" id="color4" name="color4"></form>
-            </div>    
-            <div class="form-container">
-            Client Primary Color:
-            <form>
-                
+    <div class="edit-email" id="edit-email">
+        <div class="form-container-colors">
+            <div class="form-color">
+            Primary Button Color:
+            <form onsubmit="return false" class="colors">
                 <input class="color" value="124062" id="color" name="color"></form>
             </div>
-            
-             <div class="form-container">     
-            Client Secondary Hover Color:
-            <form>
-                
+            <div class="form-color">
+            Primary Hover Color:
+            <form onsubmit="return false" class="colors">
+                <input class="color" value="124062" id="color4" name="color4"></form>
+            </div>    
+            </div>
+            <div class="form-container-colors">
+            <div class="form-color">
+            Secondary Button Color:
+            <form onsubmit="return false" class="colors">
+            <input class="color" value="124062" id="color2" name="color2">    
+            </form>
+                </div>            
+             <div class="form-color">     
+           Secondary Hover Color:
+            <form onsubmit="return false" class="colors">
                 <input class="color" value="124062" id="color3" name="color3"></form>
             </div>
-            <div class="form-container">
-            Client Secondary Color:
-            <form>
-            <input class="color" value="124062" id="color2" name="color2">    
-            </form>    
+            
         </div>
-         
+         <div class="form-wrapper">
         <div class="form-container">
             Logo URL:
             </div>    
-            <form>
+            <form onsubmit="return false">
             <input type="text" name="Logo" value="Logo URL" id="LogoID">
         </form>
-            <button class="buttons" id="removeLogo">Remove Header</button>
         </div>
         <div class="form-container">
             SubHeadline:
-            <form class="form">
+            <form class="form" onsubmit="return false">
             <input type="text" name="subheadline" value="SubHeadline" id="SubHeadlineID">
             </form>
         </div>
         <div class="form-container">
             Headline: 
-            <form>
+            <form onsubmit="return false">
             <input type="text" name="headline" value="Headline" id="HeadlineID">
         </form>
         </div>
         <div class="form-container">
             Video Thumbnail URL: 
-            <form>
+            <form onsubmit="return false">
             <input type="text" name="VideoThumbnail" value="Video Thumbnail URL" id="VideoThumbnail">
         </form>
         </div>
         <div class="form-container">
+            Blog Post URL: 
+            <form onsubmit="return false">
+            <input type="text" name="BlogPostURL" value="Blog Post URL" id="BlogPostURLID">
+        </form>
+        </div>
+        <div class="form-container">
             Teaser Copy:<br>
-            <form>
-            <textarea name="Teaser" placeholder="Teaser Copy" rows="8" cols="50" id="TeaserID">
+            <form onsubmit="return false">
+            <textarea name="Teaser" placeholder="Teaser Copy" rows="8" cols="49" id="TeaserID">
             </textarea >
             </form>    
 
         </div>
         <div class="form-container">
             YouTube URL: 
-            <form>
+            <form onsubmit="return false">
             <input type="text" name="YoutubeURL" value="YouTube URL" id="YoutubeURLID">
         </form>
         </div>
         <div class="form-container">
             Secondary CTA URL: 
-            <form>
-            <input type="text" name="SecondaryCTA" value="Secondary CTA URL">
+            <form onsubmit="return false">
+            <input type="text" name="SecondaryCTA" value="Secondary CTA URL" id="SecondaryCTAID">
         </form>
-            <button class="buttons" id="addSecondaryCTA">Add</button>
-            <button class="buttons" id="removeSecondaryCTA">Remove</button>
         </div>
         <div class="form-container">
             Home Search URL: 
-            <form>
-            <input type="text" name="HomeSearch" value="HomeSearch URL">
+            <form onsubmit="return false">
+            <input type="text" name="HomeSearch" value="HomeSearch URL" id="HomeSearchID">
         </form>
-            <button class="buttons" id="addHomeSearch">Add</button>
-            <button class="buttons" id="removeHomeSearch">Remove</button>
         </div>
         <div class="form-container">
             CTA Box Location: 
-            <form>
-            <input type="text" name="CTALocation" value="CTA Location">
+            <form onsubmit="return false">
+            <input type="text" name="CTALocation" value="CTA Location" id="CTALocationID">
         </form>
-            <button class="buttons" id="addCTALocation">Add</button>
-            <button class="buttons" id="removeCTALocation">Remove</button>
         </div>
         <div class="form-container">
             Home Value URL: 
-            <form>
-            <input type="text" name="HomeValue" value="Home Value URL">
+            <form onsubmit="return false">
+            <input type="text" name="HomeValue" value="Home Value URL" id="HomeValueID">
         </form>
-            <button class="buttons" id="addHomeValue">Add</button>
-            <button class="buttons" id="removeHomeValue">Remove</button>
         </div>
          <div class="form-container">
             Client Name: 
-            <form>
+            <form onsubmit="return false">
             <input type="text" name="ClientName" value="Client Name" id="ClientNameID">
         </form>
         </div>
@@ -939,15 +938,24 @@ body.outlook p {
         </div>
         <div class="form-container">
             Client Phone Number: 
-            <form>
+            <form onsubmit="return false">
             <input type="text" name="ClientPhone" value="Client Phone Number" id="ClientPhone">
         </form>      
         </div>
         <div class="form-container">
             Client Thumbnail Image: 
-            <form>
+            <form onsubmit="return false">
             <input type="text" name="ClientPhoto" value="Client Thumbnail Image" id="ClientPhoto">
         </form>
+        </div>
+        <div class="form-container">
+            Client Description: 
+            <form onsubmit="return false">
+            <input type="text" name="ClientDescription" value="Client Description" id="ClientDescriptionID">
+        </form>
+        </div>
+         <div class="form-container">
+            <button class="submit" id="submit-button" type="submit">Finished Editing</button>     
         </div>
             </div>
     </div>    
@@ -1024,7 +1032,7 @@ body.outlook p {
                 			
                             				<p class="lead">Press play to watch:</p>
 <!--Link to blog post goes here-->                            
-<a href="#" id="YoutubeURL" target="_blank">  
+<a href="#" id="BlogPostURL" target="_blank">  
 <!--Video Screenshot goes here !!!!!MUST BE EXPORTED FROM PHOTOSHOP AT EXACTLY 580px WIDE!!!!!-->     
     
 <img src="https://s3.amazonaws.com/vyralmarketing/vyral-marketing/email+template+images/v010-thumbnail-2smaller.png" width="580px" height="auto" id="VideoThumbnailID" />
@@ -1099,26 +1107,30 @@ In this video, you're going to learn how to better follow up with our prospectin
                         			</tr>
                       			</table>
                       		</td>
+                     
                       		<td class="wrapper last">
+                                      
                       			<table class="six columns">
                         			<tr>
                           				<td>
-
-                            				<table class="button secondary">
+<a href="#" id="SecondaryCTA"> 
+                            				<table class="button secondary color">
                               					<tr>
                              						<td>
-                                  						<a href="#" id="SecondaryCTA">
+                                  						
                                       						Get a Free Consultation »
-                                						</a>
+                                						
                              						</td>
                              	 				</tr>
+                                               
                             				</table>
-
+</a>   
                           				</td>
+                                        
                             			<td class="expander"></td>
                         			</tr>
                       			</table>
-                        
+                      
                   			</tr>
               			</table>
                   
@@ -1186,7 +1198,7 @@ In this video, you're going to learn how to better follow up with our prospectin
     
              			<table class="row">
                 			<tr>
-                     			<td class="wrapper last background-image2">
+                     			<td class="wrapper last background-image">
                         
                         			<table class="twelve columns ">
                             			<tr>
@@ -1301,7 +1313,7 @@ In this video, you're going to learn how to better follow up with our prospectin
          </td>
      </tr>
 </table>
-<table class="row background-footer">
+<table class="row background-footer footer">
     <tr>
      	<td class="center" align="center">
              <center>
@@ -1329,7 +1341,7 @@ In this video, you're going to learn how to better follow up with our prospectin
                             <table class="nine columns" id="footerText">
                             	<tr>
                                 	<td class="text-pad">
-                 							<p>Vyral Marketing helps you get more sales from your customer database. We interview you on a HD webcam to educate your customer database with video to grow sales - we do all the work for you. We edit your video, write your articles, send your email, update your social media, and more.</p>
+                 							<p id="ClientDescription">Vyral Marketing helps you get more sales from your customer database. We interview you on a HD webcam to educate your customer database with video to grow sales - we do all the work for you. We edit your video, write your articles, send your email, update your social media, and more.</p>
                                 		</td>
                             		</tr>
                         		</table>

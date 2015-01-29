@@ -2,10 +2,7 @@
 <!-- saved from url=(0076)file:///C:/Users/Brent/Documents/GitHub/Ink%20Template%20Modifier/index.html -->
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="./email_files/style.css">
-    <script src="./email_files/jquery.min.js"></script>
-     <script type="text/javascript" src="./email_files/jscolor.js"></script>
-    <script src="./email_files/jquery.min(1).js"></script>
-    <script type="text/javascript" src="./email_files/script.js"></script>
+    </head><body>    
 	
 	<meta name="viewport" content="width=device-width">
 	<style>
@@ -540,17 +537,17 @@ table.large-button td a:visited {
 table.secondary td {
   background: #EF6D21;
   border-color: #a54b17;
-  color: #555;
+  color: #fff;
 }
 
 table.secondary td a {
   color: #FFFFFF;
 }
 
-table.secondary:hover td {
+/*table.secondary:hover td {
   background: #df661f !important;
   color: #555;
-}
+}*/
 
 table.secondary:hover td a,
 table.secondary td a:visited,
@@ -704,9 +701,12 @@ body.outlook p {
     display: inherit !important;
   }
 }
-
-  .header{background-color: #20623F;}</style>
-  <style>
+    .header{
+    background-color: #124062;
+    }
+        .color-blue{
+      	color: #124062;
+      }
 
     table.facebook td {
       background: #3b5998;
@@ -745,11 +745,6 @@ body.outlook p {
       background:#ECF8FF;
       border-color: #b9e5ff;
     }
-
-    .header {
-        background: #124062;
-    }
-
     .footer .wrapper {
       background: #ebebeb;
     }
@@ -781,9 +776,6 @@ body.outlook p {
         padding-right: 10px !important;
       }
     }
-      .color-blue{
-      	color: #124062;
-      }
        .color-white{
           color: #FFFFFF;
       }
@@ -822,146 +814,22 @@ body.outlook p {
 <!--background color for the "about our comanpany" row-->
       
       .background-footer{
-      	background-color: #ebebeb;
+      	background-color: #ebebeb;  
       }
       .home-links{
       	font-size: 18px;
       }      
-	.header{background-color: #20623F;}</style>
-</head>
-<body>
-    <div class="edit-email">
-        <div class="form-wrapper">
-            <div class="form-container">
-            Client Primary Color:
-            <form>
-            <input class="color" value="124062" id="color" name="color" autocomplete="off">
-            </form>    
-                 <button class="buttons" id="addColor">Add</button>
-        </div>    
-        <div class="form-container">
-            <div class="banner">
-            <h6>Logo URL:</h6> 
-            </div>    
-            <form>
-            <input type="text" name="Logo" value="Logo URL">
-        </form>
-            <button class="buttons" id="addLogo">Add</button>
-            <button class="buttons" id="removeLogo">Remove</button>
-        </div>
-        <div class="form-container">
-            SubHeadline:
-            <form class="form">
-             
-            <input type="text" name="subheadline" value="SubHeadline">
-            </form>
-            <button class="buttons" id="addSubheadline">Add</button>
-            <button class="buttons" id="removeSubheadline">Remove</button>
-        </div>
-        <div class="form-container">
-            Headline: 
-            <form>
-            <input type="text" name="headline" value="Headline">
-        </form>
-            <button class="buttons" id="addheadline">Add</button>
-            <button class="buttons" id="removeheadline">Remove</button>
-        </div>
-        <div class="form-container">
-            Video Thumbnail URL: 
-            <form>
-            <input type="text" name="VideoThumbnail" value="Video Thumbnail URL">
-        </form>
-            <button class="buttons" id="addVideoThumbnail">Add</button>
-            <button class="buttons" id="removeVideoThumbnail">Remove</button>
-        </div>
-        <div class="form-container">
-            Teaser Copy:<br>
-            <form>
-            <textarea name="Teaser" placeholder="Teaser Copy" rows="8" cols="41">            </textarea>
-            </form>    
-            <button class="buttons" id="addTeaser">Add</button>
-            <button class="buttons" id="removeTeaser">Remove</button>
-        </div>
-        <div class="form-container">
-            YouTube URL: 
-            <form>
-            <input type="text" name="YoutubeURL" value="YouTube URL">
-        </form>
-            <button class="buttons" id="addYoutubeURL">Add</button>
-            <button class="buttons" id="removeYoutubeURL">Remove</button>
-        </div>
-        <div class="form-container">
-            Secondary CTA URL: 
-            <form>
-            <input type="text" name="SecondaryCTA" value="Secondary CTA URL">
-        </form>
-            <button class="buttons" id="addSecondaryCTA">Add</button>
-            <button class="buttons" id="removeSecondaryCTA">Remove</button>
-        </div>
-        <div class="form-container">
-            Home Search URL: 
-            <form>
-            <input type="text" name="HomeSearch" value="HomeSearch URL">
-        </form>
-            <button class="buttons" id="addHomeSearch">Add</button>
-            <button class="buttons" id="removeHomeSearch">Remove</button>
-        </div>
-        <div class="form-container">
-            CTA Box Location: 
-            <form>
-            <input type="text" name="CTALocation" value="CTA Location">
-        </form>
-            <button class="buttons" id="addCTALocation">Add</button>
-            <button class="buttons" id="removeCTALocation">Remove</button>
-        </div>
-        <div class="form-container">
-            Home Value URL: 
-            <form>
-            <input type="text" name="HomeValue" value="Home Value URL">
-        </form>
-            <button class="buttons" id="addHomeValue">Add</button>
-            <button class="buttons" id="removeHomeValue">Remove</button>
-        </div>
-         <div class="form-container">
-            Client Name: 
-            <form>
-            <input type="text" name="ClientName" value="Client Name">
-        </form>
-            <button class="buttons" id="addClientName">Add</button>
-            <button class="buttons" id="removeClientName">Remove</button>
-        </div>
-         <div class="form-container">
-            Client Email Address: 
-            <form>
-            <input type="text" name="ClientEmail" value="Client Email Address">
-        </form>
-            <button class="buttons" id="addClientEmail">Add</button>
-            <button class="buttons" id="removeClientEmail">Remove</button>
-        </div>
-        <div class="form-container">
-            Client Phone Number: 
-            <form>
-            <input type="text" name="ClientPhone" value="Client Phone Number">
-        </form>
-            <button class="buttons" id="addClientPhone">Add</button>
-            <button class="buttons" id="removeClientPhone">Remove</button>
-        </div>
-        <div class="form-container">
-            Client Thumbnail Image: 
-            <form>
-            <input type="text" name="ClientPhoto" value="Client Thumbnail Image">
-        </form>
-            <button class="buttons" id="addClientPhoto">Add</button>
-            <button class="buttons" id="removeClientPhoto">Remove</button>
-        </div>
-            </div>
-    </div>    
+	</style>
+
+
+    
+        
 	<table class="body">
 		<tbody><tr>
 			<td class="center" align="center" valign="top">
         <center>
 
-          <table class="row header color" id="color">
+          <table class="row header headerID">
         	<tbody><tr>
             	<td class="center" align="center">
                 	<center>
@@ -975,7 +843,7 @@ body.outlook p {
 
                             				<td class="six sub-columns" id="Logo">
 <!--Logo URL Goes Here-->                                
-<img src="./email_files/Vyral-Marketing-Partner-Logo.png" width="auto" height="75">
+<img src="./email_files/75" width="auto" height="75px" id="Logoimage">
                                 
                             				</td>
                             				<td class="six sub-columns last">
@@ -1029,10 +897,10 @@ body.outlook p {
                 			
                             				<p class="lead">Press play to watch:</p>
 <!--Link to blog post goes here-->                            
-<a href="file:///C:/Users/Brent/Documents/GitHub/Ink%20Template%20Modifier/index.html#" id="VideoThumbnail">  
+<a href="file:///C:/Users/Brent/Documents/GitHub/Ink%20Template%20Modifier/index.html#" id="BlogPostURL" target="_blank">  
 <!--Video Screenshot goes here !!!!!MUST BE EXPORTED FROM PHOTOSHOP AT EXACTLY 580px WIDE!!!!!-->     
     
-<img src="./email_files/v010-thumbnail-2smaller.png" width="580px" height="auto">
+<img src="./email_files/320" width="580px" height="auto" id="VideoThumbnailID">
     
 <!--Blog post link and image end here-->    
 						
@@ -1084,46 +952,50 @@ In this video, you're going to learn how to better follow up with our prospectin
                       			<table class="six columns">
                       		  		<tbody><tr>
                           				<td>
-
+<a href="file:///C:/Users/Brent/Documents/GitHub/Ink%20Template%20Modifier/index.html#" id="YoutubeURL" target="_blank">
                             				<table class="button">
                               					<tbody><tr>
-                                					<td id="YoutubeURL">
+                                					<td>
 <!--Link to blog post goes here-->                                                        
-<a href="file:///C:/Users/Brent/Documents/GitHub/Ink%20Template%20Modifier/index.html#">
+
                                       
                                       						Watch the Video »
                                                         
-                                    					</a>
+                                    					
                                                         
                                 					</td>
                               					</tr>
                             				</tbody></table>
-
+</a>
                           				</td>
                             			<td class="expander"></td>
                         			</tr>
                       			</tbody></table>
                       		</td>
+                     
                       		<td class="wrapper last">
+                                      
                       			<table class="six columns">
                         			<tbody><tr>
                           				<td>
-
-                            				<table class="button secondary">
+<a href="file:///C:/Users/Brent/Documents/GitHub/Ink%20Template%20Modifier/index.html#" id="SecondaryCTA"> 
+                            				<table class="button secondary color">
                               					<tbody><tr>
                              						<td>
-                                  						<a href="file:///C:/Users/Brent/Documents/GitHub/Ink%20Template%20Modifier/index.html#" id="SecondaryCTA">
+                                  						
                                       						Get a Free Consultation »
-                                						</a>
+                                						
                              						</td>
                              	 				</tr>
+                                               
                             				</tbody></table>
-
+</a>   
                           				</td>
+                                        
                             			<td class="expander"></td>
                         			</tr>
                       			</tbody></table>
-                        
+                      
                   			</td></tr>
               			</tbody></table>
                   
@@ -1134,7 +1006,7 @@ In this video, you're going to learn how to better follow up with our prospectin
     
 <!--link to the home search site ends here-->
     
-         				<table class="row color-blue" id="HomeSearchClone">
+         				<table class="row" id="HomeSearchClone">
                  			<tbody><tr>
                  				<td class="wrapper last background-image">
                         
@@ -1189,9 +1061,9 @@ In this video, you're going to learn how to better follow up with our prospectin
     
  <!--link to home value report ends here--> 
     
-             			<table class="row color-blue">
+             			<table class="row">
                 			<tbody><tr>
-                     			<td class="wrapper last background-image2">
+                     			<td class="wrapper last background-image">
                         
                         			<table class="twelve columns ">
                             			<tbody><tr>
@@ -1275,7 +1147,7 @@ In this video, you're going to learn how to better follow up with our prospectin
                         <tbody><tr>
                           <td align="center">
                             <center>
-                              <p class="color-blue  contact-text" style="text-align:center;" id="ClientPhone">402-555-5555</p>
+                              <p class="color-blue  contact-text" style="text-align:center;" id="ClientPhoneNumber">402-555-5555</p>
                             </center>
                           </td>
                           <td class="expander"></td>
@@ -1291,7 +1163,7 @@ In this video, you're going to learn how to better follow up with our prospectin
               </td>
             </tr>
           </tbody></table>
- <table class="row header">
+ <table class="row header headerID">
     <tbody><tr>
         <td class="wrapper last">
             <table class="twelve columns">
@@ -1306,21 +1178,21 @@ In this video, you're going to learn how to better follow up with our prospectin
          </td>
      </tr>
 </tbody></table>
-<table class="row background-footer">
+<table class="row background-footer footer">
     <tbody><tr>
      	<td class="center" align="center">
              <center>
              	<table class="container">
                 	<tbody><tr>
-                    	<td class="wrapper panel">
+                    	<td class="wrapper panel footerImage" id="footerImage">
                         
                             <table class="three columns center">
                             	<tbody><tr>
                                 	<td class="center">
                                     
-                                        <center id="ClientPhoto">
+                                        <center>
                                     	
-                                            <img class="center" src="./email_files/frank-klesitz-130.png">
+                                            <img class="center" src="./email_files/frank-klesitz-130.png" id="ClientPhotoID">
                                             
                                         </center>
                                         
@@ -1328,13 +1200,13 @@ In this video, you're going to learn how to better follow up with our prospectin
                                     <td class="expander"></td>    
                                 </tr>
                             </tbody></table>
-                       	
-                        </td><td class="wrapper last panel">
+                        </td>
+                        <td class="wrapper last panel">
                         
-                            <table class="nine columns">
+                            <table class="nine columns" id="footerText">
                             	<tbody><tr>
                                 	<td class="text-pad">
-                 							<p>Vyral Marketing helps you get more sales from your customer database. We interview you on a HD webcam to educate your customer database with video to grow sales - we do all the work for you. We edit your video, write your articles, send your email, update your social media, and more.</p>
+                 							<p id="ClientDescription">Vyral Marketing helps you get more sales from your customer database. We interview you on a HD webcam to educate your customer database with video to grow sales - we do all the work for you. We edit your video, write your articles, send your email, update your social media, and more.</p>
                                 		</td>
                             		</tr>
                         		</tbody></table>

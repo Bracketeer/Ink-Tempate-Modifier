@@ -1,8 +1,8 @@
       
       .edit-email{
           background-color: #ebebeb;
-          width: 400px;
-          color: #ffffff;
+          width: 370px;
+          color: #000;
           position: fixed;
           top: 0;
           display: block;  
@@ -11,53 +11,77 @@
 	      right: 0;
           height: 100%;;
           overflow: scroll;
+          padding: 20px;
           
       }
       .form-container{
       display: block;
      margin: 0 auto;
-    padding: 0 0 10px 0; 
     width: 100%;
         
           
       }
+    .form-container-colors{
+         display: inline-block;
+        width: 180px;
+        margin: 0 auto;
+        }
       .form-wrapper{
         display: block;
-        padding: 0 10px;
       }
       
       .buttons{
         color: #ffffff;
         background-color: #124062; 
         border: solid 1px #0e3552;
-        padding: 15px 30px;
+        padding: 15px 5px;
         margin: 0 auto;  
-        width: 152px;  
+        width: 100px; 
+        
+      }
+      .submit:hover{
+        color: #ffffff;
+        background-color: #0e3552; 
+        border: solid 1px #124062;
+        padding: 15px auto;
+        margin: 10px auto;  
+        width: 100%;  
+      }
+    .submit{
+        color: #ffffff;
+        background-color: #124062; 
+        border: solid 1px #0e3552;
+        padding: 15px 5px;
+        margin: 10px auto;  
+        width: 100%; 
+        
       }
       .buttons:hover{
         color: #ffffff;
         background-color: #0e3552; 
         border: solid 1px #124062;
-        padding: 15px 30px;
+        padding: 15px auto;
         margin: 0 auto;  
-        width: 152px;  
+        width: 100px;  
       }
       form{
         padding: 5px 0;      
         margin: 5px auto;
       }
+    
       input{
-        padding: 5px;
-        margin: 0 5px;
-        width: 360px;
-        height: 30px;  
+        margin: 0 auto;
+        width: 99%;
+        height: 30px; 
+        padding-left: 5px;  
       }
-.banner{
-background: #124062;
-padding: 10px 20px;
-width:100%;
-overflow: visible;    
-}
+
+.color{
+        padding: 5px;
+        height: 30px; 
+        width: 95%;
+      }
+
 .displayNone{
 display: none;
 }
